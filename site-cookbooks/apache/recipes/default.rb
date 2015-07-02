@@ -11,17 +11,11 @@
 
 case node['platform']
 	when 'ubuntu'
-		apache = 'apache2'
+		include_recipe 'apache::ubuntu'
 	when 'centos', 'redhat'
-		apache = 'httpd'
-end
-
-package apache do
-  action :install
-end
-
-service apache do
-	action [ :enable, :start ]
+		include_recipe 'apache::centos'
+	else
+		log("unsuppoted platform #{node['platform']}")
 end
 
 
