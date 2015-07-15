@@ -8,11 +8,6 @@
 #
 
 
-# remove
-package 'mysql-server' do
-	action :remove
-end
-
 # add the EPEL repo
 yum_repository 'epel' do
   description 'Extra Packages for Enterprise Linux'

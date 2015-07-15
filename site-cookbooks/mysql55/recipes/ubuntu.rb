@@ -8,11 +8,6 @@
 #
 
 
-# remove
-package 'mysql-server' do
-	action :remove
-end
-
 # install
 package 'mysql-server' do
 	action :install
