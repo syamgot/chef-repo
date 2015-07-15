@@ -6,3 +6,16 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+
+
+case node['platform']
+	when 'ubuntu'
+		include_recipe 'php56::ubuntu'
+	when 'centos', 'redhat'
+		include_recipe 'php56::centos'
+	else
+		log("unsuppoted platform #{node['platform']}")
+end
+
+
