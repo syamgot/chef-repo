@@ -1,0 +1,11 @@
+{
+	"run_list": [
+		"apt",
+		"apache",
+		"mysql55",
+		"php56"
+	],
+	"automatic": {
+		"ipaddress": "vagrant-ubuntu"
+	}
+}

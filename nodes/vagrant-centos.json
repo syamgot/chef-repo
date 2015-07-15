@@ -1,0 +1,11 @@
+{
+	"run_list": [
+		"yum",
+		"apache",
+		"mysql55",
+		"php56"
+	],
+	"automatic": {
+		"ipaddress": "vagrant-centos"
+	}
+}
